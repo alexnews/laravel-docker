@@ -1,0 +1,23 @@
+web:
+  build: .
+  ports:
+    - "4444:80"
+  links:
+    - db
+  volumes:
+    - .:/code
+#    - /Users/alex/Documents/0work/Projects/aphorism.ru/req:/code/req
+#    - /Users/alex/Documents/0work/Projects/aphorism.ru/www:/code/www 
+#    - /Users/alex/Documents/0work/Projects/aphorism.ru/req:/req
+  container_name: web-laravel
+db:
+  image: "mysql:5"
+  container_name: db-laravel
+  ports: 
+    - 3335:3306
+  volumes:
+    - ./mysql:/etc/mysql/conf.d
+    - laravel:/var/lib/mysql
+  environment:
+    MYSQL_ROOT_PASSWORD: phpapptest 
+    MYSQL_DATABASE: laravel
