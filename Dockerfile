@@ -30,7 +30,3 @@ CMD ["/usr/sbin/apachectl", "-D", "FOREGROUND"]
 #RUN php composer-setup.php
 #RUN php -r "unlink('composer-setup.php');"
 #RUN php composer.phar create-project laravel/laravel /code/www/lsapp 
-#RUN mkdir /usr/local/www
-#RUN mkdir /usr/local/www/aphorism.ru
-#RUN ln -s /code/www /usr/local/www/aphorism.ru/www
-#RUN ln -s /code/req /usr/local/www/aphorism.ru/req
