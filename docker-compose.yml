@@ -6,9 +6,6 @@ web:
     - db
   volumes:
     - .:/code
-#    - /Users/alex/Documents/0work/Projects/aphorism.ru/req:/code/req
-#    - /Users/alex/Documents/0work/Projects/aphorism.ru/www:/code/www 
-#    - /Users/alex/Documents/0work/Projects/aphorism.ru/req:/req
   container_name: web-laravel
 db:
   image: "mysql:5"
