@@ -18,3 +18,9 @@ db:
   environment:
     MYSQL_ROOT_PASSWORD: phpapptest 
     MYSQL_DATABASE: laravel
+
+adminer:
+  image: adminer
+  restart: always
+  ports:
+    - 8088:8080

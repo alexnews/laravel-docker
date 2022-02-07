@@ -1,5 +1,6 @@
 FROM centos:6
-MAINTAINER Takayuki Miwa <i@tkyk.name>
+MAINTAINER Alex Kargin <alex@kargin-utkin.com>
+#from  Takayuki Miwa <i@tkyk.name>
 
 ENV code_root /code
 ENV httpd_conf ${code_root}/httpd.conf
